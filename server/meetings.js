@@ -25,7 +25,7 @@ meetingsRouter.get('/', (req, res, next) => {
 // automatically by the server upon request. Use the provided createMeeting function
 // exported from db.js to create a new meeting object.
 meetingsRouter.post('/', (req, res, next) => {
-  const newMeeting = addToDatabase('minions', createMeeting());
+  const newMeeting = addToDatabase('meetings', createMeeting());
   res.status(201).send(newMeeting);
 });
 

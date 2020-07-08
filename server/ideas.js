@@ -56,7 +56,7 @@ ideasRouter.put('/:ideaId', checkMillionDollarIdea, (req, res, next) => {
 
 // DELETE /api/ideas/:ideaId to delete a single idea by id.
 ideasRouter.delete('/:ideaId', (req, res, next) => {
-  const deletedIdea = deleteFromDatabasebyId('minions', req.params.ideaId);
+  const deletedIdea = deleteFromDatabasebyId('ideas', req.params.ideaId);
   if (deletedIdea) {
     res.status(204).send();
   } else {
